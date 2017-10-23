@@ -11,7 +11,7 @@ Hoe.spec 'activityutils' do
   self.urls    = ['https://github.com/rubylibs/activityutils']
 
   self.author  = 'Gerald Bauer'
-  self.email   = 'webslideshow@googlegroups.com'
+  self.email   = 'wwwmake@googlegroups.com'
 
   # switch extension to .markdown for gihub formatting
   self.readme_file  = 'README.md'
@@ -24,7 +24,7 @@ Hoe.spec 'activityutils' do
   self.licenses = ['Public Domain']
 
   self.spec_extras = {
-   :required_ruby_version => '>= 1.9.2'
+   :required_ruby_version => '>= 2.3'
   }
 
 end
