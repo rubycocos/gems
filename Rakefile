@@ -8,23 +8,23 @@ Hoe.spec 'activityutils' do
   self.summary = 'activityutils - activity (timeline) utilities'
   self.description = summary
 
-  self.urls    = ['https://github.com/rubylibs/activityutils']
+  self.urls    = ['https://github.com/rubycoco/activityutils']
 
   self.author  = 'Gerald Bauer'
   self.email   = 'wwwmake@googlegroups.com'
 
   # switch extension to .markdown for gihub formatting
   self.readme_file  = 'README.md'
-  self.history_file = 'History.md'
+  self.history_file = 'CHANGELOG.md'
 
   self.extra_deps = [
-    ['logutils', '>= 0.5']
+    ['logutils', '>= 0.6.1']
   ]
 
   self.licenses = ['Public Domain']
 
   self.spec_extras = {
-   :required_ruby_version => '>= 2.3'
+   required_ruby_version: '>= 2.2.2'
   }
 
 end

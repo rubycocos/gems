@@ -15,4 +15,6 @@ module ActivityUtils
 end  # module ActivityUtils
 
 
-puts ActivityUtils.banner    # say hello
+# say hello
+puts ActivityUtils.banner   if $DEBUG || (defined?($RUBYLIBS_DEBUG) && $RUBYLIBS_DEBUG)
+   
