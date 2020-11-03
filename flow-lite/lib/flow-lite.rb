@@ -112,20 +112,18 @@ class Flowfile
 
   ## find flowfile path by convention
   ## check for name by convention in this order:
-  FLOWFILES = ['flowfile',    'Flowfile',
-               'flowfile.rb', 'Flowfile.rb']
+  NAMES = ['flowfile',    'Flowfile',
+           'flowfile.rb', 'Flowfile.rb']
   def self.find_file
-    FLOWFILES.each do |name|
+    NAMES.each do |name|
       return "./#{name}"   if File.exist?( "./#{name}" )
     end
-
-    STDERR.puts "!! ERROR - no flowfile found, sorry - looking for: #{FLOWFILES.join(', ')} in (#{Dir.pwd})"
-    exit 1
+    nil
   end # method self.find_file
 
 
   ## convenience method - use like Flowfile.load_file()
-  def self.load_file( path=find_file )
+  def self.load_file( path )
     code = File.open( path, 'r:utf-8' ) { |f| f.read }
     load( code )
   end
@@ -205,14 +203,29 @@ class Tool
       names = options[:requires]
       names.each do |name|
         ## todo/check: add some error/exception handling here - why? why not?
-        puts "[flow] (auto-)require >#{name}<..."
+        puts "[flow] auto-require >#{name}<..."
         require( name )
+      end
+    else  ## use/try defaults
+      config_path = "./config.rb"
+      if File.exist?( config_path )
+        puts "[flow] auto-require (default) >#{config_path}<..."
+        require( config_path )
       end
     end
 
 
-    path = options[:flowfile] || Flowfile.find_file
+    path = nil
+    if options[:flowfile]
+      path = options[:flowfile]
+    else
+      path = Flowfile.find_file
 
+      if path.nil?
+        STDERR.puts "!! ERROR - no flowfile found, sorry - looking for: #{Flowfile::NAMES.join(', ')} in (#{Dir.pwd})"
+        exit 1
+      end
+    end
 
     puts "[flow] loading >#{path}<..."
     flowfile = Flowfile.load_file( path )

@@ -3,8 +3,8 @@
 flow-lite gem - (yet) another (lite) workflow engine; let's you define your workflow steps in Flowfiles; incl. the flow command line tool
 
 
-* home  :: [github.com/rubycoco/git](https://github.com/rubycoco/git)
-* bugs  :: [github.com/rubycoco/git/issues](https://github.com/rubycoco/git/issues)
+* home  :: [github.com/rubycoco/flow](https://github.com/rubycoco/flow)
+* bugs  :: [github.com/rubycoco/flow/issues](https://github.com/rubycoco/flow/issues)
 * gem   :: [rubygems.org/gems/flow-lite](https://rubygems.org/gems/flow-lite)
 * rdoc  :: [rubydoc.info/gems/flow-lite](http://rubydoc.info/gems/flow-lite)
 
@@ -66,7 +66,7 @@ require 'net/http'
 require 'net/https'
 ```
 
-Tip: See the [`flow-lite.rb`](https://github.com/rubycoco/git/blob/master/flow-lite/lib/flow-lite.rb) source for the definite always up-to-date list.
+Tip: See the [`flow-lite.rb`](https://github.com/rubycoco/flow/blob/master/flow-lite/lib/flow-lite.rb) source for the definite always up-to-date list.
 
 
 That's it for now.
