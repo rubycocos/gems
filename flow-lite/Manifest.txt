@@ -4,4 +4,6 @@ README.md
 Rakefile
 bin/flow
 lib/flow-lite.rb
+lib/flow-lite/base.rb
+lib/flow-lite/tool.rb
 lib/flow-lite/version.rb
