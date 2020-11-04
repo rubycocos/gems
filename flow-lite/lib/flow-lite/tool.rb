@@ -22,7 +22,7 @@ class Tool
         options[:debug] = debug
         ## note: for no auto-set env here - why? why not
         ENV['DEBUG']='1'   ## use t or true or such - why? why not?
-        puts "[flow] setting >DEBUG< env variable to >#{1}<"
+        puts "[flow]   set >DEBUG< env variable to >1<"
       end
 
       ## todo/check/reserve:  add  -e/--env(iornmanet)  e.g.  dev/test/prod(uction) etc.
