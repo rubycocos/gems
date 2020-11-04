@@ -51,7 +51,7 @@ Use the `-f/--file/--flowfile` option to use a different file.
 Use the `-d/--debug` option to turn on debugging
 or pass in `DEBUG=t` as an environment variable on the command line.
 
-Helper.   In your flowfiles you can use the `debug?` helper to
+Helper.   In your flowfiles you can use the `debug?` helper
 to check if debugging is turned on. Example:
 
 ``` ruby
@@ -59,7 +59,7 @@ step :json do
   outdir = if debug?
              './o'
            else
-             Mononame.realpath( '@openfootball/football.json' )
+             realpath( '@openfootball/football.json' )
            end
   #...
 end
@@ -296,7 +296,7 @@ end
 (Sources: [`Flowfile`](https://github.com/yorobot/backup/blob/master/Flowfile.rb), [`workflows/update.yml`](https://github.com/yorobot/backup/blob/master/.github/workflows/update.yml) @ `yorobot/backup`)
 
 
-**Build SQLite database (from Scratch) and Update .json Datasets Nightly**
+**Build SQLite database (from Scratch) and Update .JSON Datasets Nightly**
 
 Use GitHub Actions to build a SQLite football.db
 from zero / scratch from the sources in the football.TXT format

@@ -36,7 +36,7 @@ class Base
      git config --global user.email "gerald.bauer+yorobot@gmail.com"
      git config -l --show-origin
 =end
-  def step_setup
+  def step_adduser
     ##############
     ## setup ssh
 
@@ -122,4 +122,4 @@ end  # class Tool
 end  # module Yorobot
 
 
-puts YorobotCore.banner             # say hello
+puts Yorobot::Module::Tool.banner             # say hello
