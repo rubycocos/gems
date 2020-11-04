@@ -40,18 +40,44 @@ Example:
 $ flow first_step
 ```
 
-Note: By default the `flow` command line tool reads in and looks for `flowfile`, `Flowfile`, `flowfile.rb`, `Flowfile.rb`
+Note: By default the `flow` command line tool reads in and looks for `./flowfile`, `./Flowfile`, `./flowfile.rb`, `./Flowfile.rb`
 in that order.
-Use the `-f/--flowfile` option to use a different file.
+Use the `-f/--file/--flowfile` option to use a different file.
 
+
+
+**Debugging**
+
+Use the `-d/--debug` option to turn on debugging
+or pass in `DEBUG=t` as an environment variable on the command line.
+
+Helper.   In your flowfiles you can use the `debug?` helper to
+to check if debugging is turned on. Example:
+
+``` ruby
+step :json do
+  outdir = if debug?
+             './o'
+           else
+             Mononame.realpath( '@openfootball/football.json' )
+           end
+  #...
+end
+```
 
 
 **Prelude / Prolog**
 
 Use the `-r/--require` option to (auto-)require
 some extra libraries or scripts.
-By default for now the "prelude / prolog" that always
-gets auto-required includes:
+
+1) By default the `flow` command line tool will look for
+and (auto-)require the `./config.rb` script if it exists
+AND if no extra libraries or scripts are passed along with the
+`-r/--require` option.
+
+2) By default the "prelude / prolog" that always
+gets auto-required (via the flow-lite gem / library) includes:
 
 ``` ruby
 require 'pp'
@@ -67,6 +93,29 @@ require 'net/https'
 ```
 
 Tip: See the [`flow-lite.rb`](https://github.com/rubycoco/flow/blob/master/flow-lite/lib/flow-lite.rb) source for the definite always up-to-date list.
+
+
+
+**(Environment) Variables**
+
+On the command line you can pass along (environment) variables
+using `NAME=VALUE` to set and `NAME=` to unset. Example:
+
+```
+$ flow json DEBUG=t           # -or-
+$ flow DEBUG=t json
+
+$ flow build DATA=worldcup
+$ flow publish VERSION=1.1.0
+```
+
+This will (behind the scene) turn into
+
+``` ruby
+ENV[ 'DEBUG' ]   = 't'
+ENV[ 'DATA' ]    = 'worldcup'
+ENV[ 'VERSION' ] = '1.1.0'
+```
 
 
 That's it for now.
@@ -159,14 +208,13 @@ end
 
 
 
-
 **Tips & Tricks**
 
 Auto-include pre-build / pre-defined steps. Use a (regular) Module e.g.:
 
 ``` ruby
 module GitHubActions
-  def step_setup
+  def step_adduser
      # setup ssh
      ssh_key  = ENV['SSH_KEY']
      ssh_path = File.expand_path( '~/.ssh' )
@@ -199,14 +247,14 @@ end
 Flow::Base.include( GitHubActions )
 ```
 
-Now all your flows can (re)use `setup` or any other step methods you define.
+Now all your flows can (re)use `adduser` or any other step methods you define.
 
 
 
 
 ## Real World Examples
 
-**Collect GitHub Statistics**
+**Collect GitHub Statistics Fortnightly**
 
 Use GitHub Actions to collect
 GitHub Statistics via GitHub API calls
@@ -248,7 +296,19 @@ end
 (Sources: [`Flowfile`](https://github.com/yorobot/backup/blob/master/Flowfile.rb), [`workflows/update.yml`](https://github.com/yorobot/backup/blob/master/.github/workflows/update.yml) @ `yorobot/backup`)
 
 
+**Build SQLite database (from Scratch) and Update .json Datasets Nightly**
 
+Use GitHub Actions to build a SQLite football.db
+from zero / scratch from the sources in the football.TXT format
+and than update / generate the football.json datasets.
+
+
+(Sources: [`Flowfile`](https://github.com/yorobot/football.json/blob/master/Flowfile.rb), [`workflows/update.yml`](https://github.com/yorobot/football.json/blob/master/.github/workflows/update.yml) @ `yorobot/football.json`)
+
+
+
+
+Add your example / setup here!
 
 
 
