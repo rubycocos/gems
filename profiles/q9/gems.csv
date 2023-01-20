@@ -1,0 +1,6 @@
+name, version, version_created, version_downloads, homepage, dependencies
+money-tree, 0.11.2, 2023-01-05, 714, https://github.com/GemHQ/money-tree, bech32 | openssl
+eth, 0.5.10, 2023-01-02, 2341, https://github.com/q9f/eth.rb, keccak | konstructor | openssl | rbsecp256k1 | scrypt
+keccak, 1.3.1, 2022-08-23, 38663, https://github.com/q9f/keccak.rb, 
+omniauth-ethereum, 0.2.0, 2022-06-07, 598, https://github.com/q9f/omniauth-ethereum.rb, eth | omniauth
+eth-patched, 0.4.15, 2021-10-07, 1491, https://github.com/q9f/ruby-eth, ffi | keccak | money-tree | rlp | scrypt
