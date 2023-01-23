@@ -1,0 +1,9 @@
+name, version, version_created, version_downloads, homepage, dependencies
+caxlsx, 3.3.0, 2022-10-21, 327040, https://github.com/caxlsx/caxlsx, htmlentities | marcel | nokogiri | rubyzip
+caxlsx_rails, 0.6.3, 2022-03-08, 1070273, https://github.com/caxlsx/caxlsx_rails, actionpack | caxlsx
+da-js, 1.2.1, 2020-11-11, 1408, https://github.com/die-antwort/da-js, coffee-script | railties | sprockets
+cologne_phonetics, 1.0.2, 2018-03-15, 2344, https://github.com/die-antwort/cologne_phonetics, 
+lighter_box, 0.6.0, 2017-11-19, 1925, https://github.com/die-antwort/lighter_box, coffee-script | sass
+jquery-rails-aristo, 1.0.3, 2015-01-22, 3073, https://github.com/die-antwort/jquery-rails-aristo, rails
+da-has_token, 1.0.2, 2014-07-03, 3355, https://github.com/die-antwort/da-has_token, rails
+da-suspenders, 2.0.0, 2012-12-21, 4024, http://github.com/die-antwort/da-suspenders, bundler | rails | trout

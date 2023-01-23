@@ -1,0 +1,12 @@
+name, version, version_created, version_downloads, homepage, dependencies
+jekyll-bulma, 0.9.4, 2022-02-23, 1048, http://github.com/jekyll-octopod/jekyll-bulma, jekyll
+jekyll-octopod, 0.9.23, 2020-04-25, 1921, https://github.com/haslinger/jekyll-octopod, facets | jekyll | jekyll-admin | jekyll-bootflat | kramdown-parser-gfm
+jekyll-bootflat, 0.3.2, 2020-04-08, 1974, http://github.com/jekyll-octopod/jekyll-bootflat, jekyll
+jekyll-openui5, 0.1.0, 2018-08-08, 1823, https://github.com/haslinger/jekyll-openui5, jekyll
+octopod-exe, 0.9.4, 2017-12-06, 1856, https://github.com/haslinger/jekyll-octopod, addressable | backports | bundler | colorator | facets | ffi | forwardable-extended | jekyll | jekyll-admin | jekyll-bootflat | jekyll-sass-converter | jekyll-watch | kramdown | liquid | listen | mercenary | multi_json | pathutil | public_suffix | rack | rack-protection | rack-test | rb-fsevent | rb-inotify | rouge | safe_yaml | sass | sass-listen | sinatra | sinatra-contrib | tilt
+hobo_w2ui, 0.1.4, 2014-11-25, 3007, http://github.com/informatom/hobo_w2ui, hobo_jquery | rails
+mercator_bechlem, 0.1, 2014-08-11, 3022, http://mercator.informatom.com, mysql2 | rails
+mercator_icecat, 0.1, 2014-08-11, 3056, http://mercator.informatom.com, rails | saxerator | try_to
+mercator_legacy_importer, 0.1, 2014-08-11, 3036, http://mercator.informatom.com, mysql2 | rails
+mercator_mesonic, 0.1, 2014-08-11, 3027, http://mercator.informatom.com, activerecord-sqlserver-adapter | nokogiri | rails
+mercator_mpay24, 0.1, 2014-08-11, 3030, http://mercator.informatom.com, rails

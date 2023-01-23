@@ -8,11 +8,11 @@ See  [**gemverse  »**](https://github.com/rubycocos/git/tree/master/gemverse)
 
 ## Leaderboard
 
-_Sorted by Gems Count×2 + Updates Count_
+_Sorted by Gems Count × 2 + Updates Count_
 
 
 - 244 Gems, 1652 Updates -  [Gerald Bauer (Austria, near Vienna)'s Gem Timeline (By Month)](profiles/geraldbauer)
-- 134 Gems, 1642 Updates - [Andrew Kane (San Francisco, United States)'s Gem Timeline (By Month)](profiles/ankane)
+- 134 Gems, 1642 Updates - [Andrew Kane (United States, San Francisco)'s Gem Timeline (By Month)](profiles/ankane)
 - 100 Gems, 773 Updates - [Jan Lelis (Germany, Berlin)'s Gem Timeline (By Month)](profiles/janlelis)
 - 24 Gems, 238 Updates - [Thomas Leitner (Austria, Vienna)'s Gem Timeline (By Month)](profiles/gettalong)
 - 32 Gems, 149 Updates - [Victor Shepelev (Ukraine, Kharkiv)'s Gem Timeline (By Month)](profiles/zverok)

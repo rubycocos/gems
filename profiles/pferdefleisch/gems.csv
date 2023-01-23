@@ -1,0 +1,11 @@
+name, version, version_created, version_downloads, homepage, dependencies
+messenger_client, 0.2.3, 2017-06-01, 2054, https://computercomputer.computer, typhoeus
+sinbotra, 0.2.0, 2017-03-08, 2052, http://computercomputer.computer, messenger_client | redis | sinatra | sucker_punch | typhoeus
+garsh, 0.1.1, 2016-04-01, 2377, http://aaroncruz.com, faraday
+guard-uglify, 1.0.0, 2014-12-05, 4838, http://aaroncruz.com, guard | uglifier
+guard-sprockets, 1.1.0, 2014-01-15, 7071, https://rubygems.org/gems/guard-sprockets, execjs | guard | sprockets
+ansible_utils, 0.0.2, 2013-09-08, 4315, http://aaroncruz.com, thor
+rails_bootstrap_helpers, 0.1.0, 2013-07-21, 3264, https://github.com/pferdefleisch/rails_bootstrap_helpers, rails
+markdownable, 0.0.3, 2012-08-07, 3640, http://aaroncruz.com, redcarpet
+jquery_dynamic_fields, 0.0.5, 2012-06-22, 3729, https://github.com/pferdefleisch/jquery_dynamic_fields, 
+jquery_underscore-rails, 0.1.0, 2011-02-03, 4169, http://github.com/pferdefleisch/jquery_underscore-rails, rails | thor
